@@ -1,9 +1,11 @@
-const parenteses = '()()()'
+const validaParenteses = parenteses => {
+    const arrayParenteses = parenteses.split(""); 
 
-const validaParenteses = parenteses.split('').reduce((itemAnterior, itemAtual) => {
-    if(itemAnterior != itemAtual) {
-        return true
-    } else {
-        return false
-    }
-})
+    const verificaParenteses =  !arrayParenteses.reduce(function(anterior, atual) {
+      if(anterior < 0) { return anterior } // para o caso de começar com ")"
+      if(atual ===  "(") { return ++anterior }
+      if(atual ===  ")") { return --anterior }
+    }, 0);
+  
+    return verificaParenteses;
+}
