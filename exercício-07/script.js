@@ -22,7 +22,7 @@ var lista = [
 ]
 
 const buscar = (propriedade, valor, lista) => {
-    return lista.find(item => item[propriedade] == valor)
+    return lista.find(item => item[propriedade] === valor)
 }
 
 console.log(buscar('nome', 'Tânia', lista))

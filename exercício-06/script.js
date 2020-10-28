@@ -5,10 +5,6 @@ const alunos = [
     { nome: 'Tiago', media: 6.0 }
 ];
 
-const aprovados = alunos.filter((aluno) => {
-    if(aluno.media >= 6) {
-        return aluno.nome
-    }
-})
+const aprovados = alunos => alunos.filter((aluno) => aluno.media >= 6)
 
-console.log(aprovados)
+console.log(aprovados(alunos))

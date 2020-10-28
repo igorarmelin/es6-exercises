@@ -22,10 +22,11 @@ const produtos = [
     { nome:'Torta de frango', preco:'25', dataValidade:'07/07/2017' }
 ]
 
-const existeProdutosDatados = (produtos, dataReferencia = new Date()) => {
+const existeProdutosDatados = (produtos, data) => {
+    const dataReferencia = new Date()
     
-    if(dataReferencia) {
-        dataReferencia = new Date(dataReferencia);
+    if(data) {
+        dataReferencia = new Date(data);
     }
         
     return produtos.some( produto => new Date(produto.dataValidade) < dataReferencia )

@@ -5,8 +5,8 @@ var dimensoes = [
     { altura: 50, comprimento: 50}
 ]
 
-const calculaAreaTotal = dimensoes.reduce((somaArea, dimensao) => {
+const calculaAreaTotal = dimensoes => dimensoes.reduce((somaArea, dimensao) => {
     return somaArea + (dimensao.altura * dimensao.comprimento);
 }, 0)
 
-console.log(calculaAreaTotal)
+console.log(calculaAreaTotal(dimensoes))
