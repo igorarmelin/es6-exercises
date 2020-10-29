@@ -1,0 +1,1 @@
+const imprimeProduto = (nome, preco) => console.log(`Produto: ${nome} | Preço: ${preco}`)
